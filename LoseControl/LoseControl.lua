@@ -8,7 +8,7 @@ local Immune  = "Immune"
 local PvE     = "PvE"
 
 local Prio = {CC,Silence,Disarm,Root,Snare}
-if GetLocale == enUS then
+if GetLocale() == "enUS" then
 local spellIds = {
 	-- Druid
 	["Hibernate"] = CC, -- Hibernate
@@ -102,7 +102,7 @@ local spellIds = {
 	["Chill"] = Snare, -- Chill
 	["Charge"] = CC, -- Charge
 }
-elseif GetLocale == zhCN then
+elseif GetLocale() == "zhCN" then
 local spellIds = {
 	-- Druid
 	["休眠"] = CC, -- Hibernate
