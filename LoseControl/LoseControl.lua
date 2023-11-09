@@ -8,7 +8,7 @@ local Immune  = "Immune"
 local PvE     = "PvE"
 
 local Prio = {CC,Silence,Disarm,Root,Snare}
-
+if GetLocale == enUS then
 local spellIds = {
 	-- Druid
 	["Hibernate"] = CC, -- Hibernate
@@ -102,6 +102,108 @@ local spellIds = {
 	["Chill"] = Snare, -- Chill
 	["Charge"] = CC, -- Charge
 }
+elseif GetLocale == zhCN then
+local spellIds = {
+	-- Druid
+	["休眠"] = CC, -- Hibernate
+	["星火昏迷"] = CC, -- Starfire
+	["纠缠根须"] = Root, -- Entangling Roots
+	["重击"] = CC, -- Bash
+	["血袭"] = CC, -- Pounce
+	["野性冲锋效果"] = Root, -- Feral Charge
+	-- Hunter
+	["胁迫"] = CC, -- Intimidation
+	["恐吓野兽"] = CC, -- Scare Beast
+	["驱散射击"] = CC, -- Scatter Shot
+	["强化震荡射击"] = CC, -- Improved Concussive Shot
+	["震荡射击"] = Snare, -- Concussive Shot
+	["冰冻陷阱效果"] = CC, -- Freezing Trap
+	["冰冻陷阱"] = CC, -- Freezing Trap
+	["冰霜陷阱光环"] = Root, -- Freezing Trap
+	["冰霜陷阱"] = Root, -- Frost Trap
+	["诱捕"] = Root, -- Entrapment
+	["翼龙钉刺"] = CC, -- Wyvern Sting; requires a hack to be removed later
+	["反击"] = Root, -- Counterattack
+	["强化摔绊"] = Root, -- Improved Wing Clip
+	["摔绊"] = Snare, -- Wing Clip
+	["野猪冲撞"] = Root, -- Boar Charge
+	-- Mage
+	["变形术"] = CC, -- Polymorph: Sheep
+	["变形术：龟"] = CC, -- Polymorph: Turtle
+	["变形术：猪"] = CC, -- Polymorph: Pig
+	["变形术：奶牛"] = CC, -- Polymorph: Cow
+	["变形术：鸡"] = CC, -- Polymorph: Chicken
+	["法术反制 - 沉默"] = Silence, -- Counterspell
+	["冲击"] = CC, -- Impact
+	["冲击波"] = Snare, -- Blast Wave
+	["霜寒刺骨"] = Root, -- Frostbite
+	["冰霜新星"] = Root, -- Frost Nova
+	["寒冰箭"] = Snare, -- Frostbolt
+	["冰锥术"] = Snare, -- Cone of Cold
+	["冰冻"] = Snare, -- Improved Blizzard + Ice armor
+	-- Paladin
+	["制裁之锤"] = CC, -- Hammer of Justice
+	["忏悔"] = CC, -- Repentance
+	-- Priest
+	["精神控制"] = CC, -- Mind Control
+	["心灵尖啸"] = CC, -- Psychic Scream
+	["昏阙"] = CC, -- Blackout
+	["沉默"] = Silence, -- Silence
+	["精神鞭笞"] = Snare, -- Mind Flay
+	-- Rogue
+	["致盲"] = CC, -- Blind
+	["偷袭"] = CC, -- Cheap Shot
+	["凿击"] = CC, -- Gouge
+	["肾击"] = CC, -- Kidney shot; the buff is 30621
+	["闷棍"] = CC, -- Sap
+	["脚踢 - 沉默"] = Silence, -- Kick
+	["致残毒药"] = Snare, -- Crippling Poison
+	-- Warlock
+	["死亡缠绕"] = CC, -- Death Coil
+	["恐惧术"] = CC, -- Fear
+	["恐惧嚎叫"] = CC, -- Howl of Terror
+	["疲劳诅咒"] = Snare, -- Curse of Exhaustion
+	["火焰冲撞"] = CC, -- Pyroclasm
+	["清算"] = Snare, -- Aftermath
+	["诱惑"] = CC, -- Seduction
+	["法术封锁"] = Silence, -- Spell Lock
+	["地狱火效果"] = CC, -- Inferno Effect
+	["地狱火"] = CC, -- Inferno
+	["残废术"] = Snare, -- Cripple
+	-- Warrior
+	["冲锋击昏"] = CC, -- Charge Stun
+	["拦截昏迷"] = CC, -- Intercept Stun
+	["破胆怒吼"] = CC, -- Intimidating Shout
+	["复仇昏迷"] = CC, -- Revenge Stun
+	["震荡猛击"] = CC, -- Concussion Blow
+	["刺耳怒吼"] = Snare, -- Piercing Howl
+	["盾击 - 沉默"] = Silence, -- Shield Bash - Silenced
+	--Shaman	
+	["冰封武器"] = Snare, -- Frostbrand Weapon
+	["冰霜震击"] = Snare, -- Frost Shock
+	["地缚术"] = Snare, -- Earthbind
+	["地缚图腾"] = Snare, -- Earthbind Totem
+	-- other
+	["战争践踏"] = CC, -- War Stomp
+	["潮汐咒符"] = CC, -- Tidal Charm
+	["锤击昏迷效果"] = CC, -- Mace Stun Effect
+	["昏迷"] = CC, -- Stun
+	["侏儒洗脑帽"] = CC, -- Gnomish Mind Control Cap
+	["无畏冲锋"] = CC, -- Reckless Charge
+	["催眠术"] = CC, -- Sleep
+	["眩晕"] = Snare, -- Dazed
+	["冰冻术"] = Root, -- Freeze
+	["寒冷"] = Snare, -- Chill
+	["冲锋"] = CC, -- Charge
+	["冰爆术"] = CC, -- Ice Yeti
+	["蹬踏"] = CC, -- Ashenvale Outrunner
+	["鞭笞"] = CC, -- Lashtail Raptor
+	["水晶凝视"] = CC, -- Crystal Spine Basilisk
+	["蛛网"] = Root,      -- Carrion Lurker
+	["恐吓"] = CC, -- Fr Pterrordax
+	["恐吓尖啸"] = CC, -- Pterrordax
+}
+end
 
 local wipe = function(t)
 	for k,v in pairs(t) do
